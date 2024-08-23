@@ -1,20 +1,17 @@
-function ExpenseItem(){
-    return (
-        <div> 
-            <div>
-                <h2> Expense Items !</h2>
-                <h2>
-                    Food Rs 10
-                </h2>
-                <h2>
-                    Petrol Rs 100
-                </h2>
-                <h2>
-                    Movies Rs 200
-                </h2>
-            </div>
-        </div>
-    )
+import ExpenseDate from "./ExpenseDate";
+import ExpenseDetails from "./ExpenseDetails";
+import "./ExpenseItem.css";
+
+function ExpenseItem(props) {
+  
+
+  return (
+    <div className="expense-item">
+      <ExpenseDate  date={props.date}/>
+     
+    <ExpenseDetails title={props.title}  location={props.location} amount={props.amount} />
+   </div>
+   );
 }
 
 export default ExpenseItem;
